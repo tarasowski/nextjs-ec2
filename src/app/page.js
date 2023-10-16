@@ -21,7 +21,9 @@ export default function Home() {
       <main>
         <Navigation />
         <h1>Here is my todo list</h1>
+        {/* 
         <AddTodo />
+    */}
         <Todos />
       </main>
       <Footer
