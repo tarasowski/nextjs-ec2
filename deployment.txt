@@ -1,0 +1,14 @@
+1. Launch EC2 instance (free tier)
+2. Create or download a key .pem or ppk key
+3. Open SSH and connect with your key: ssh -i path/to/your-key-pair.pem ec2-user@public-ip-address
+4. Update the package repositories: sudo yum update
+5. Install nodejs and npm package manager: sudo yum nodejs npm
+6. Clone this repository using git to the ec2 instance
+7. Go to the project folder: cd /path/to/yournextjs
+8. Install the dependencies: npm install
+9. Build the application: npm run build
+10. Install the process manager: npm install -g pm2
+11. Start the application as a process: pm2 start npm --name "nextjs-todo" -- start
+12. Configure security groups: allow inbound traffic for port 80 for HTTP or port 443 for HTTPS
+13. Get the public IP of the instance and access your app: xx.xxx.xxx.xx:3000
+Bonus: (use google) install reverse proxy to make the app accessible w/o :3000
